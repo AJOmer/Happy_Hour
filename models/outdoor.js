@@ -19,4 +19,4 @@ const outdoorSchema = new mongoose.Schema({
 });
 
 const Outdoor = mongoose.model("Outdoor", outdoorSchema);
-module.exports = Bar;
+module.exports = Outdoor;

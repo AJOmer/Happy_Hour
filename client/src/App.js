@@ -1,26 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import Homepage from "./layout/homepage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {
+        location: "Where in Frisco?",
+        latitude: 0,
+        longitude: 0,
+    };
+
+    locationHandler(loc) {
+        this.setState({
+            location: loc,
+        });
+    }
+
+    success = (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        this.setState({
+            latitude,
+            longitude,
+        });
+    };
+
+    error = () => {
+        console.log("Cannot grab your location");
+    };
+
+    componentDidMount() {
+        if (!navigator.geolocation) {
+            console.log("Geolocation not supported");
+        } else {
+            console.log("location supported!");
+            navigator.geolocation.getCurrentPosition(this.success, this.error);
+        }
+    }
+
+    render() {
+        return ( <
+            div className = "container" >
+            <
+            Switch >
+            <
+            Route path = "/"
+            render = {
+                (props) => {
+                    return ( <
+                        Homepage {...props }
+                        changeLocation = { this.locationHandler.bind(this) }
+                        part = { this.state.location }
+                        />
+                    );
+                }
+            }
+            />{" "} <
+            /Switch>{" "} <
+            /div>
+        );
+    }
 }
 
 export default App;

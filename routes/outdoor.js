@@ -1,5 +1,5 @@
 const express = require("express");
-const outdoorCtrl = require("../config/bars.js");
+const outdoorCtrl = require("../config/outdoor");
 const outdoorRouter = new express.Router();
 
 outdoorRouter.route("/yelp/:name").get(outdoorCtrl.yelpBiz);

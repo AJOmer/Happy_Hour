@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require("../config/outdoor");
 
 module.exports = {
     create: (req, res) => {
@@ -7,5 +7,5 @@ module.exports = {
             if (err) res.json({ success: false, code: err.code });
             else res.json({ success: true, user: user });
         });
-    }
+    },
 };
