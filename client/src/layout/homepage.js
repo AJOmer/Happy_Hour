@@ -14,16 +14,16 @@ class Homepage extends Component {
                 <
                 li onClick = { this.listHandler.bind(this) }
                 className = "dropdown_item" >
-                Frisco <
-                /li> <
+                San Francisco { " " } <
+                /li>{" "} <
                 li onClick = { this.listHandler.bind(this) }
                 className = "dropdown_item" >
-                Oakland <
-                /li> <
+                Oakland { " " } <
+                /li>{" "} <
                 li onClick = { this.listHandler.bind(this) }
                 className = "dropdown_item" >
-                Berkley <
-                /li> <
+                Berkley { " " } <
+                /li>{" "} <
                 /ul>
             );
         }
@@ -56,25 +56,25 @@ class Homepage extends Component {
             div className = "homepage" >
             <
             h1 className = "appname" >
-            Brews around < span className = "appname2" > The Bay < /span> <
-            /h1> <
-            h2 className = "homepage_slogan" > Discover new bars < /h2> <
+            Brews around < span className = "appname2" > The Bay < /span>{" "} <
+            /h1>{" "} <
+            h2 className = "homepage_slogan" > Discover new bars < /h2>{" "} <
             div className = "homepage_menu" >
             <
-            div className = "homepage_location" > { this.props.part } <
+            div className = "homepage_location" > { " " } { this.props.part } { " " } <
             span className = "homepage_icon"
             onClick = { this.menuHandler.bind(this) } >
-            { this.state.icon } <
-            /span> <
-            /div> { this.menu() } <
-            /div> <
+            { this.state.icon } { " " } <
+            /span>{" "} <
+            /div>{" "} { this.menu() } { " " } <
+            /div>{" "} <
             button className = "homepage_button" >
             <
             Link className = "homepage_link"
             to = "/content" >
-            Let 's Explore! <
-            /Link> <
-            /button> <
+            Let 's Explore!{" "} <
+            /Link>{" "} <
+            /button>{" "} <
             /div>
         );
     }

@@ -7,7 +7,7 @@ httpClient.getInfo = function(name) {
 };
 
 httpClient.submitInfo = function(fields) {
-    return this({ method: this.get, url: "api/outdoor/new", data: fields });
+    return this({ method: "post", url: "/api/outdoor/new", data: fields });
 };
 
 httpClient.getOutdoor = function(location) {

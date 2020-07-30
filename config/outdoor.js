@@ -1,6 +1,7 @@
 const Outdoor = require("../models/outdoor");
 require("dotenv").config();
 const apiKey = process.env.REACT_APP_YELP_API_KEY;
+("use strict");
 const yelp = require("yelp-fusion");
 const client = yelp.client(apiKey);
 

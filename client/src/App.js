@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Homepage from "./layout/homepage";
 import Create from "./layout/create";
+import Content from "./layout/content";
 
 class App extends Component {
     state = {
@@ -44,6 +45,18 @@ class App extends Component {
             <
             Switch >
             <
+            Route path = "/content"
+            render = {
+                (props) => {
+                    return ( <
+                        Content {...props }
+                        location = { this.state }
+                        part = { this.state.location }
+                        />
+                    );
+                }
+            }
+            /> <
             Route path = "/create"
             render = {
                 (props) => {
@@ -51,7 +64,7 @@ class App extends Component {
                     />;
                 }
             }
-            /> <
+            />{" "} <
             Route path = "/"
             render = {
                 (props) => {
