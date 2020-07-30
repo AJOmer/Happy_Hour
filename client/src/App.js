@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Homepage from "./layout/homepage";
+import Create from "./layout/create";
 
 class App extends Component {
     state = {
@@ -43,6 +44,14 @@ class App extends Component {
             <
             Switch >
             <
+            Route path = "/create"
+            render = {
+                (props) => {
+                    return <Create {...props }
+                    />;
+                }
+            }
+            /> <
             Route path = "/"
             render = {
                 (props) => {
