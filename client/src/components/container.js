@@ -49,7 +49,7 @@ class Container extends Component {
         const { location } = this.props;
         const { lat, long } = this.state;
         return ( <
-            div className = { this.state.image ? "card" : "no-display" } > { this.lightHandler() } <
+            div className = { this.state.image ? "card" : "no-display" } > { " " } { this.lightHandler() } { " " } <
             div className = "card__info" >
             <
             div className = "card__image-holder" >
@@ -59,7 +59,7 @@ class Container extends Component {
             alt = "restaurant" /
             >
             <
-            /div> <
+            /div>{" "} <
             div className = "card__left" >
             <
             a className = "card__link"
@@ -67,33 +67,33 @@ class Container extends Component {
             rel = "noopener noreferrer"
             href = { this.state.link } >
             <
-            h1 className = "card__title" > { name } < /h1> <
-            /a> <
+            h1 className = "card__title" > { name } < /h1>{" "} <
+            /a>{" "} <
             div className = "card__stats" >
             <
-            h3 > STATS: < /h3> <
+            h3 > INFO: < /h3>{" "} <
             ul >
             <
             li className = "card__stat" >
             <
             i class = "fas fa-beer card__list-style" / >
-            RATING: { this.ratingHandler() } <
-            /li> <
+            RATING: { this.ratingHandler() } { " " } <
+            /li>{" "} <
             li className = "card__stat" >
             <
             i class = "fas fa-beer card__list-style" / >
             REVIEWS:
             <
-            span className = "card__count" > { this.state.count } < /span> <
-            /li> <
+            span className = "card__count" > { this.state.count } < /span>{" "} <
+            /li>{" "} <
             li className = "card__stat" >
             <
             i class = "fas fa-beer card__list-style" / >
-            PRICE: { this.priceHandler() } <
-            /li> <
-            /ul> <
-            /div> { this.hourHandler() } <
-            /div> <
+            PRICE: { this.priceHandler() } { " " } <
+            /li>{" "} <
+            /ul>{" "} <
+            /div>{" "} { this.hourHandler() } { " " } <
+            /div>{" "} <
             div className = "card__right" >
             <
             a target = "_blank"
@@ -101,20 +101,25 @@ class Container extends Component {
             href = {
                 "http://maps.google.com/?q=" +
                 this.state.location +
-                "los angeles,CA"
+                "san francisco,CA"
             }
             className = "card__address" >
             <
-            h3 > { this.state.location } < /h3> <
-            /a> <
-            h3 > { this.state.number } < /h3>
-
-            <
-            h3 > { this.distance(lat, long, location.latitude, location.longitude) } { " " }
-            miles <
-            /h3> <
-            /div> <
-            /div> <
+            h3 > { this.state.location } < /h3>{" "} <
+            /a>{" "} <
+            h3 > { this.state.number } < /h3>{" "} <
+            h3 > { " " } {
+                this.distance(
+                    lat,
+                    long,
+                    location.latitude,
+                    location.longitude
+                )
+            } { " " }
+            miles { " " } <
+            /h3>{" "} <
+            /div>{" "} <
+            /div>{" "} <
             /div>
         );
     }
@@ -143,12 +148,12 @@ class Container extends Component {
                 timeArray[1] = timeArray[1] - 12 + "pm";
                 newHours = timeArray.join("-");
                 return ( <
-                    h2 className = "card__hH" > { this.currentName() }: { newHours } <
+                    h2 className = "card__hH" > { " " } { this.currentName() }: { newHours } { " " } <
                     /h2>
                 );
             } else {
                 return ( <
-                    h2 className = "card__hH" > { this.currentName() }: { onlyHours } <
+                    h2 className = "card__hH" > { " " } { this.currentName() }: { onlyHours } { " " } <
                     /h2>
                 );
             }

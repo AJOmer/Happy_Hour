@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Fragment, Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Homepage from "./layout/homepage";
 import Create from "./layout/create";
 import Content from "./layout/content";
+import Footer from "./components/footer";
 
 class App extends Component {
     state = {
@@ -43,6 +44,8 @@ class App extends Component {
         return ( <
             div className = "container" >
             <
+            Fragment >
+            <
             Switch >
             <
             Route path = "/content"
@@ -56,7 +59,7 @@ class App extends Component {
                     );
                 }
             }
-            /> <
+            />{" "} <
             Route path = "/create"
             render = {
                 (props) => {
@@ -77,7 +80,10 @@ class App extends Component {
                 }
             }
             />{" "} <
-            /Switch>{" "} <
+            /Switch> <
+            Footer / >
+            <
+            /Fragment>{" "} <
             /div>
         );
     }

@@ -22,7 +22,7 @@ class Homepage extends Component {
                 /li>{" "} <
                 li onClick = { this.listHandler.bind(this) }
                 className = "dropdown_item" >
-                Berkley { " " } <
+                San Jose { " " } <
                 /li>{" "} <
                 /ul>
             );
@@ -58,7 +58,11 @@ class Homepage extends Component {
             h1 className = "appname" >
             Brews around < span className = "appname2" > The Bay < /span>{" "} <
             /h1>{" "} <
-            h2 className = "homepage_slogan" > Discover new bars < /h2>{" "} <
+            h2 className = "homepage_slogan" > { " " }
+            Your < span className = "span2" > Happy hour < /span> headquarters{" "} <
+            /h2>{" "} <
+            div className = "homepage_search" >
+            <
             div className = "homepage_menu" >
             <
             div className = "homepage_location" > { " " } { this.props.part } { " " } <
@@ -75,6 +79,7 @@ class Homepage extends Component {
             Let 's Explore!{" "} <
             /Link>{" "} <
             /button>{" "} <
+            /div>{" "} <
             /div>
         );
     }

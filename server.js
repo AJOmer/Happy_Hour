@@ -6,8 +6,9 @@ const logger = require("morgan");
 const axios = require("axios");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/outdoor";
 const PORT = process.env.PORT || 3030;
-const outdoorRouter = require('./routes/outdoor');
-const userRouter = require('./routes/user');
+const outdoorRouter = require("./routes/outdoor");
+const userRouter = require("./routes/user");
+const Outdoor = require("./models/outdoor");
 
 // CONNECT TO THE DB \\
 mongoose.connect(

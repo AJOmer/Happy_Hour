@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import httpClient from "../httpClient";
 import Container from "../components/container";
+import { Link } from "react-router-dom";
 
 class Content extends Component {
     state = {
@@ -16,6 +17,8 @@ class Content extends Component {
             });
         });
     }
+
+    // CHANGE 'OUTDOOR' with 'LOCATION' like up top \\
     cardMap = () => {
         return this.state.outdoor.map((outdoor, i) => {
             return ( <
@@ -36,6 +39,14 @@ class Content extends Component {
         return ( <
             div className = "feed" >
             <
+            h2 >
+            <
+            Link className = "landingpage"
+            to = "/" >
+            <
+            i className = "fa fa-home" > < /i>{" "} <
+            /Link>{" "} <
+            /h2>{" "} <
             h1 className = "feed__title" > { this.state.location } < /h1>{" "} <
             div className = "feed__map" >
             <
