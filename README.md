@@ -7,9 +7,9 @@ With assistance from Yelp's 3rd-party API, Bays Around the Bay caters to the wee
 ## Technologies
 * JavaScript
 * React
--Express
--MongoDb
--Nodejs
--Yelp API
--Geolocation API
--Bootstrap/ReactStrap
+* Express
+* MongoDb
+* Nodejs
+* Yelp API
+* Geolocation API
+* Bootstrap/ReactStrap
