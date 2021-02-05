@@ -19,3 +19,8 @@ With assistance from Yelp's 3rd-party API, Bays Around the Bay caters to the wee
 * Yelp API displays vital Bar keypoints such as star rating, reviews, average price-range, phone number and address.
 * Custom express routing for manual bar information input. (Admin Route)
 * Geolocation API displays exact distance from user's location of access to a specific bar.
+
+## Possible Future plans
+* Fully Responsive
+* Leverage React Native to convert into a mobile application
+* User profiles so users can 'favorite' or share bars on a 'twitter'-esque timeline.
