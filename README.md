@@ -1,3 +1,3 @@
-# Happy_Hour
+# Brews By the Bay
 
 ![](baybrews.gif)
