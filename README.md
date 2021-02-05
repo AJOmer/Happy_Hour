@@ -5,8 +5,8 @@ With assistance from Yelp's 3rd-party API, Bays Around the Bay caters to the wee
 ![](baybrews.gif)
 
 ## Technologies
--JavaScript
--React
+* JavaScript
+* React
 -Express
 -MongoDb
 -Nodejs
